@@ -35,7 +35,7 @@ io.on('connect', (socket) => {
 
     io.to(user.room).emit('message', { user: user.name, text: message });
 
-    callback();
+    callback(); 
   });
 
   socket.on('disconnect', () => {
@@ -48,4 +48,4 @@ io.on('connect', (socket) => {
   })
 });
 
-server.listen(process.env.PORT || 5000, () => console.log(`Server has started.`));
+server.listen(process.env.PORT || 4000, () => console.log(`Server has started.`));
